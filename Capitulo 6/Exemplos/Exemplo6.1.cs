@@ -5,17 +5,7 @@
  * Disponível em: http://www.silabo.pt
 */
 
-using System;
-namespace ConsoleApp1
+for (int i = 1; i < 51; i++)
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            for (int i = 1; i < 51; i++)
-            {
-                Console.WriteLine(i);
-            }
-        }
-    }
+    Console.WriteLine(i);
 }

@@ -5,19 +5,9 @@
  * Disponível em: http://www.silabo.pt
 */
 
-using System;
-namespace ConsoleApp1
+int i = 1;
+while (i < 51)
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            int i = 1;
-            while (i < 51)
-            {
-                Console.WriteLine("{0}", i);
-                i++;
-            }
-        }
-    }
+    Console.WriteLine("{0}", i);
+    i++;
 }

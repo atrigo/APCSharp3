@@ -5,29 +5,19 @@
  * Disponível em: http://www.silabo.pt
 */
 
-using System;
-namespace ConsoleApp1
+int num, i;
+Console.Write("Insira um numero:");
+num = Convert.ToInt32(Console.ReadLine());
+bool eprimo = true;
+for (i = 2; i <= Math.Sqrt(num); i++)
 {
-    class Program
+    if (num % i == 0)
     {
-        static void Main(string[] args)
-        {
-            int num, i;
-            Console.Write("Insira um numero:");
-            num = Convert.ToInt32(Console.ReadLine());
-            bool eprimo = true;
-            for (i = 2; i <= Math.Sqrt(num); i++)
-            {
-                if (num % i == 0)
-                {
-                    eprimo = false;
-                    break;
-                }
-            }
-            if (eprimo)
-                Console.WriteLine("O numero {0} e primo.", num);
-            else
-                Console.WriteLine("O numero {0} nao e primo.", num);
-        }
+        eprimo = false;
+        break;
     }
 }
+if (eprimo)
+    Console.WriteLine("O numero {0} e primo.", num);
+else
+    Console.WriteLine("O numero {0} nao e primo.", num);

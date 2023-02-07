@@ -5,25 +5,15 @@
  * Disponível em: http://www.silabo.pt
 */
 
-using System;
-namespace ConsoleApp1
+int numero, menor;
+Console.WriteLine("Insira um numero:");
+numero = Convert.ToInt32(Console.ReadLine());
+menor = numero;
+while (numero != 0)
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            int numero, menor;
-            Console.WriteLine("Insira um numero:");
-            numero = Convert.ToInt32(Console.ReadLine());
-            menor = numero;
-            while (numero != 0)
-            {
-                Console.WriteLine("Insira um numero:");
-                numero = Convert.ToInt32(Console.ReadLine());
-                if (menor > numero && numero != 0)
-                    menor = numero;
-            }
-            Console.WriteLine("O menor numero e {0}.", menor);
-        }
-    }
+    Console.WriteLine("Insira um numero:");
+    numero = Convert.ToInt32(Console.ReadLine());
+    if (menor > numero && numero != 0)
+        menor = numero;
 }
+Console.WriteLine("O menor numero e {0}.", menor);

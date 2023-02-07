@@ -11,27 +11,17 @@
   naturais próprios (excluindo ele mesmo) é igual ao próprio número. 
   Exemplos de números perfeitos: 6, 28, 496, 8128, ...
 */
-using System;
 
-namespace Cap6
+int j,n,soma;
+for (n = 2; n < 10000; n++)
 {
-    class Program
-    {
-        static void Main(string[] args) 
-        {
-            int j,n,soma;
-            for (n = 2; n < 10000; n++)
-            {
-                soma = 1;
-                for (j = 2; j <= (Math.Sqrt((float)n)); j++)
-                    if (n % j == 0)
-                        if (j == n / j)
-                            soma += j;
-                        else
-                            soma += j + n / j;
-                if (soma == n)
-                    Console.WriteLine(n);
-            }
-        }
-    }
+    soma = 1;
+    for (j = 2; j <= (Math.Sqrt((float)n)); j++)
+        if (n % j == 0)
+            if (j == n / j)
+                soma += j;
+            else
+                soma += j + n / j;
+    if (soma == n)
+        Console.WriteLine(n);
 }

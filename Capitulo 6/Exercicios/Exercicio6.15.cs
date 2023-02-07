@@ -8,38 +8,27 @@
 */
 
 
-using System;
-
-namespace ConsoleApplication1
+int N, n=1,i;
+float soma = 0;
+Console.Write("Quantos termos? ");
+N = Convert.ToInt32(Console.ReadLine());
+if (N > 0)
 {
-    class Program
+    Console.Write("S={0}/{1}", n, n + 2);
+    soma += (float)n / (n + 2);
+    for (i = 1; i < N; i++)
     {
-        static void Main(string[] args)
+        n += 2;
+        if (i % 2 == 0)
         {
-            int N, n=1,i;
-            float soma = 0;
-            Console.Write("Quantos termos? ");
-            N = Convert.ToInt32(Console.ReadLine());
-            if (N > 0)
-            {
-                Console.Write("S={0}/{1}", n, n + 2);
-                soma += (float)n / (n + 2);
-                for (i = 1; i < N; i++)
-                {
-                    n += 2;
-                    if (i % 2 == 0)
-                    {
-                        soma += (float)n / (n + 2);
-                        Console.Write("+{0}/{1}", n, n + 2);
-                    }
-                    else
-                    {
-                        soma -= (float)n / (n + 2);
-                        Console.Write("-{0}/{1}", n, n + 2);
-                    }
-                }
-               Console.WriteLine("\nSoma={0}", soma);
-            }
+            soma += (float)n / (n + 2);
+            Console.Write("+{0}/{1}", n, n + 2);
+        }
+        else
+        {
+            soma -= (float)n / (n + 2);
+            Console.Write("-{0}/{1}", n, n + 2);
         }
     }
+   Console.WriteLine("\nSoma={0}", soma);
 }

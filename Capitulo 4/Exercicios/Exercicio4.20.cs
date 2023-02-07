@@ -8,21 +8,9 @@
  * Disponível em: http://www.silabo.pt
 */
 
-
-using System;
-
-namespace Cap4
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            float p,s;
-            Console.Write("Qual é a nota da 1ª frequência: "); // Não é feita validação, ou seja, o utilizador pode introduzir caracteres inválidos
-            p = Convert.ToSingle(Console.ReadLine());
-            Console.Write("Qual é a nota da 2ª frequência: "); 
-            s = Convert.ToSingle(Console.ReadLine());
-            Console.WriteLine("Nota final {0:F0}",(p+s)/2); 
-        }
-    }
-}
+float p,s;
+Console.Write("Qual é a nota da 1ª frequência: "); // Não é feita validação, ou seja, o utilizador pode introduzir caracteres inválidos
+p = Convert.ToSingle(Console.ReadLine());
+Console.Write("Qual é a nota da 2ª frequência: "); 
+s = Convert.ToSingle(Console.ReadLine());
+Console.WriteLine("Nota final {0:F0}",(p+s)/2); 

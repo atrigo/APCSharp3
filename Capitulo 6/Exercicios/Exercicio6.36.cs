@@ -6,32 +6,21 @@
  * Disponível em: http://www.silabo.pt
 */
 
-using System;
+int i, n, novo_numero;
+int digito;
 
-namespace Cap6
+for (i = 10; i < 10000; i++)
 {
-    class Program
+    n = i;
+    novo_numero = 0;   
+    while (n > 0)
     {
-        static void Main(string[] args)
-        {
-            int i, n, novo_numero;
-            int digito;
-
-            for (i = 10; i < 10000; i++)
-            {
-                n = i;
-                novo_numero = 0;   
-                while (n > 0)
-                {
-                    digito = n % 10;
-                    novo_numero = novo_numero * 10 + digito;
-                    n = n/10;
-                }
-                if (i == novo_numero)
-                    Console.WriteLine(i);
-            }
-        }
+        digito = n % 10;
+        novo_numero = novo_numero * 10 + digito;
+        n = n/10;
     }
+    if (i == novo_numero)
+        Console.WriteLine(i);
 }
 
 
@@ -39,36 +28,25 @@ namespace Cap6
 Com utilização de vetores
 */
 
-using System;
-
-namespace Cap6
+uint i, j, k, n;
+uint[] v = new uint[9];
+bool cap;
+for (i = 1; i < 10000; i++)
 {
-    class Program
+    n = i;
+    j = 0;
+    do
     {
-        static void Main(string[] args) 
-        {
-            uint i, j, k, n;
-            uint[] v = new uint[9];
-            bool cap;
-            for (i = 1; i < 10000; i++)
-            {
-                n = i;
-                j = 0;
-                do
-                {
-                    v[j++] = n % 10;
-                    n /= 10;
-                }
-                while (n > 0);
-                cap = true;
-                k = 0;
-                do
-                    if (v[j - 1 - k] != v[k++])
-                        cap = false;
-                while (j / 2 >= k && cap);
-                if (cap)
-                    Console.WriteLine(i);
-            }
-        }
+        v[j++] = n % 10;
+        n /= 10;
     }
+    while (n > 0);
+    cap = true;
+    k = 0;
+    do
+        if (v[j - 1 - k] != v[k++])
+cap = false;
+    while (j / 2 >= k && cap);
+    if (cap)
+        Console.WriteLine(i);
 }

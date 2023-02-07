@@ -8,29 +8,19 @@
 */
 
 
-using System;
-
-namespace Cap6
+int n, i,j,soma=0; 
+for (j = 0; j < 15; j++)
 {
-    class Program
+    do
     {
-        static void Main(string[] args) 
-        {
-            int n, i,j,soma=0; 
-            for (j = 0; j < 15; j++)
-            {
-                do
-                {
-                    Console.Write("Introduza um nº inteiro entre 15 e 50: ");
-                    n = Convert.ToInt32(Console.ReadLine());
-                } while (n < 15 || n > 50);
-                for (i = 2; i <= Math.Sqrt(n); i++)
-                    if (n % i == 0)
-                        break;
-                if (i > Math.Sqrt(n))
-                    soma+=n;
-            }
-            Console.WriteLine("Soma: {0}",soma);
-        }
-    }
+        Console.Write("Introduza um nº inteiro entre 15 e 50: ");
+        n = Convert.ToInt32(Console.ReadLine());
+    } while (n < 15 || n > 50);
+    for (i = 2; i <= Math.Sqrt(n); i++)
+        if (n % i == 0)
+            break;
+    if (i > Math.Sqrt(n))
+        soma+=n;
 }
+Console.WriteLine("Soma: {0}",soma);
+

@@ -10,25 +10,15 @@
  *
 */
 
-using System;
-namespace ConsoleApp1
+int numero, maior;
+Console.WriteLine("Insira um numero:");
+numero = Convert.ToInt32(Console.ReadLine());
+maior = numero;
+while (numero != 0)
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            int numero, maior;
-            Console.WriteLine("Insira um numero:");
-            numero = Convert.ToInt32(Console.ReadLine());
-            maior = numero;
-            while (numero != 0)
-            {
-                Console.WriteLine("Insira um numero:");
-                numero = Convert.ToInt32(Console.ReadLine());
-                if (maior < numero)
-                    maior = numero;
-            }
-            Console.WriteLine("O maior numero e {0}.", maior);
-        }
-    }
+    Console.WriteLine("Insira um numero:");
+    numero = Convert.ToInt32(Console.ReadLine());
+    if (maior < numero)
+        maior = numero;
 }
+Console.WriteLine("O maior numero e {0}.", maior);
