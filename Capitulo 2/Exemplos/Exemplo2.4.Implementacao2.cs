@@ -5,15 +5,5 @@
  * Disponível em: http://www.silabo.pt
 */
 
-using System;
-namespace ConsoleApp1
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            for (int i = 0; i < 10; i++)
-                Console.WriteLine(" Antonio Trigo ");
-        }
-    }
-}
+for (int i = 0; i < 10; i++)
+    Console.WriteLine(" Antonio Trigo ");

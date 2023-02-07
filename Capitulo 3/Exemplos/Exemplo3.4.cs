@@ -1,28 +1,12 @@
 /*
- * Exemplo 3.4
+ * Exemplo 3.5
  * Livro: Aprenda a programar com C#
  * Autores: Antonio Trigo e Jorge Henriques
  * Disponível em: http://www.silabo.pt
 */
 
-using System;
-namespace ConsoleApp1
-{
-    class Program
-    {
-        enum DiasDaSemana
-        {
-            Domingo, Segunda, Terca, Quarta, Quinta,
-            Sexta, Sabado
-        };
-        static void Main(string[] args)
-        {
-            Console.WriteLine("{0} = {0} ", DiasDaSemana.Domingo, (int) DiasDaSemana.Domingo);
-            DiasDaSemana diaFavorito = DiasDaSemana.Sexta;
-            Console.WriteLine("O meu dia favorito e' {0} ", diaFavorito);
-            diaFavorito = (DiasDaSemana)4;
-            Console.WriteLine("O meu dia favorito e' {0} ",
-            diaFavorito);
-        }
-    }
-}
+int a = 2, b = 5;
+float c = 2, d = 5;
+Console.WriteLine("Divisao por inteiros: {0}/{1}={2}", b, a, b / a);
+Console.WriteLine("Divisao por reais: {0}/{1}={2}", d, c, d / c);
+Console.WriteLine("Divisao por reais utilizando o operador de casting: {0}/{1}={2}", b, a, (float)b / a);

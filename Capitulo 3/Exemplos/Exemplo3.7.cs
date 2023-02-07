@@ -1,24 +1,13 @@
 /*
- * Exemplo 3.7
+ * Exemplo 3.8
  * Livro: Aprenda a programar com C#
  * Autores: Antonio Trigo e Jorge Henriques
  * Disponível em: http://www.silabo.pt
 */
 
-using System;
-namespace ConsoleApp1
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            int a = 10;
-            Console.WriteLine("{0}", a = 5);
-            Console.WriteLine("{0}", a += 3);
-            Console.WriteLine("{0}", a -= 2);
-            Console.WriteLine("{0}", a *= 5);
-            Console.WriteLine("{0}", a /= 2);
-            Console.WriteLine("{0}", a %= 4);
-        }
-    }
-}
+int num1, num2;
+Console.WriteLine("Insira um numero: ");
+num1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Insira outro numero: ");
+num2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("{0}", num1 + num2);
