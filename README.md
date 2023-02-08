@@ -1,7 +1,7 @@
 # Livro Aprenda a Programar com C#
 Exemplos e exercícios do livro Aprenda a Programar com C# - 2ª Edição
 
-![Screenshot](9789895611300.jpg)
+![Screenshot](9789895612888-scaled.webp)
 
 Disponível em,
 
