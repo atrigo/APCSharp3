@@ -15,7 +15,7 @@ namespace ConsoleApp1
         {
             long offset;
             int nextByte;
-            // alphabet.txt contem "abcdefghijklmnopqrstuvwxyz"
+            // alfabeto.txt contem "abcdefghijklmnopqrstuvwxyz"
             FileStream fs = new FileStream(@"c:\alfabeto.txt", FileMode.Open,
             FileAccess.Read)
             for (offset = 1; offset <= fs.Length; offset++)

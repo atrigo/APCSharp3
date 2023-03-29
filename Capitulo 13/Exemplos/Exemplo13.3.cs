@@ -13,23 +13,18 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            try
-            {
-                using (FileStream fs = new FileStream("file.txt",
-                FileMode.Open, FileAccess.Read))
-                {
-                    using (StreamReader sr = new StreamReader(fs))
-                    {
-                        string linha;
-                        while ((linha = sr.ReadLine()) != null)
-                        {
+            try{
+                using (FileStream fs = new FileStream(``file.txt'',
+                FileMode.Open, FileAccess.Read)){
+                    using (StreamReader sr = new StreamReader(fs)){
+                        string linha;               
+                        while ((linha = sr.ReadLine()) != null){
                             Console.WriteLine(linha);
                         }
                     }
                 }
             }
-            catch (Exception e)
-            {
+            catch (Exception e){
                 Console.WriteLine("Nao foi possivel ler o ficheiro:");
                 Console.WriteLine(e.Message);
             }
